@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'intro';
-
-  showBlog = true
-  hide():void{
-    this.showBlog=false;
-  }
+  title = 'simple-crud';
 }
