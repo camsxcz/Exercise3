@@ -1,5 +1,35 @@
 console.log("TypeScript Exercise 1")
 
+console.log("Item number 1")
+
+interface City {
+  city:string;
+  country:string;
+  population: number;
+  fly?: () => number;
+}
+
+var cityList:City [] = [];
+export const addPlace = (city:string, country:string, population:number) =>{
+  var newCity:City = {city:city, country:country, population:population}
+  cityList.push(newCity)
+  displayCities(cityList)
+}
+
+export const displayCities = (checkList: City[]) => {
+  let list = document.getElementById('cityList')
+  if(list){
+    while(list.hasChildNodes() && list.firstChild){
+      list.removeChild(list.firstChild)
+    }
+  }
+  cityList.forEach((city) => {
+  let li = document.createElement("li");
+  li.innerText = city.city + "," + city.country + "," + city.population
+  list?.appendChild(li);
+})
+}
+
 console.log("Item number 2")
 function validISBN10(num: number|string|any) {
     if (num.length !== 10) {
@@ -33,16 +63,6 @@ function validISBN10(num: number|string|any) {
     console.log("Input:  " + num7 + " -> " + validISBN10(num7));
 
 
-  console.log("Item number 3");
-  let convert = (str: string) => {
-    return str.split('').reduce((a, c) => a + (/[aeiou]/i.test(c) ? c.toUpperCase() : c.toLowerCase()), "");
-  }
-  let c = "CzZilleJOY23"
-  console.log(convert(c));
-
-
-
-
 
 console.log("Item number 4")
 var moveThezero = function (arr: (string | number | boolean)[]) {
@@ -65,7 +85,7 @@ var moveThezero = function (arr: (string | number | boolean)[]) {
   console.log("Modified array:  " + moveThezero(b));
 
   
-function LetterChanges(c: string): any {
-    throw new Error("Function not implemented.");
-}
+
+
+
 
