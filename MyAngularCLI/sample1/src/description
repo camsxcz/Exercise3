@@ -1,0 +1,4 @@
+APP
+  core - authentication
+  shared- dumb components-[header, footer, panel]
+  modules
