@@ -1,7 +1,25 @@
 <app-blog-item></app-blog-item>
 <app-blog-item></app-blog-item>
-<app-blog-item></app-blog-item>
 
-<div *ngFor="let data of blogs">
-  {{data.title}}
+<div *ngFor="let data of blogs; let i = index">
+  <app-blog-item *ngIf="data.published && data.authorActive" [blog]="data" (loveEmitter)="loveAction($event)" ></app-blog-item>
+
+  <h1>{{i}}</h1>
+  <app-blog-item [blog]="data" (loveEmitter)="loveAction($event)" >{{i}}</app-blog-item>
+
 </div>
+
+<ng-container *ngFor="let numbs of nums">
+  <div [ngSwitch]="numbs">
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+    <div *ngSwitchCase="5">Five</div>
+    <div *ngSwitchCase="6">Six</div>
+    <div *ngSwitchCase="7">Seven</div>
+    <div *ngSwitchDefault>Infinity</div>
+  </div>
+</ng-container> -->
+
+<button (click)="incrementNum()">Increased</button>

@@ -1,0 +1,80 @@
+<style>
+  input[type=text], input[type=number], select {
+    width: 100%;
+    height: fit-content;
+    padding: 12px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid rgb(66, 45, 45);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #27374d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[disabled][type=submit] {
+    background:grey;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  border: 10px solid rgb(10, 10, 10);
+  padding: 10px;
+  text-align: left;
+  margin-left: 32vw;
+  background-color: rgb(199, 193, 193);
+}
+</style>
+<body>
+<h1>User Form</h1>
+<div class="center">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  Email:
+  <input
+    type="text"
+    name="email"
+    ngModel
+    required><br>
+ Name:
+  <input
+    type="text"
+    name="fullName"
+    ngModel
+    required><br>
+ Age:
+  <input
+    type="number"
+    name="age"
+    ngModel
+    required
+    pattern="^[1-9]+[0-9]*$"><br>
+ Active:
+  <select id="Active">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+  <br>
+  <input
+    type="submit"
+    value="Submit"
+    [disabled]="!f.valid">
+ </form>
+</div>
+</body>

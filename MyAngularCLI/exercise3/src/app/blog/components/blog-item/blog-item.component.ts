@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Blog } from '../../models/blog';
 
 @Component({
@@ -7,16 +7,10 @@ import { Blog } from '../../models/blog';
   styleUrls: ['./blog-item.component.scss']
 })
 export class BlogItemComponent implements OnInit {
-
-  @Input() blog:Blog | undefined;
-  @Output() loveEmitter = new EventEmitter();
+  @Input () blogs:Blog | undefined
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  sendLove() {
-    this.loveEmitter.emit(this.blog);
-  }
 }
