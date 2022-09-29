@@ -1,0 +1,64 @@
+
+<style>
+  tr, th{
+    display: flex;
+    justify-self: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    margin-left: 30px;
+  }
+  td{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+   margin: auto;
+  }
+  form {
+      width: 50%;
+      padding: 20px;
+      align-self: center;
+      margin: auto;
+      background-color: #929291;
+      }
+
+fieldset {
+border: 4px solid #273609;
+}
+
+h3{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: larger;
+}
+</style>
+
+<form>
+  <fieldset>
+    <legend>
+      <h3>Blog Details</h3>
+    </legend>
+
+
+<tr>
+  <th scope="col">ID: </th>
+  <td> {{books.id}} </td>
+</tr>
+<br/>
+<tr>
+  <th scope="col">Name: </th>
+  <td> {{books.name}} </td>
+</tr>
+<br/>
+<tr>
+  <th scope="col">Authors: </th>
+  <td> {{books.authors}} </td>
+</tr>
+<br/>
+<tr>
+  <th scope="col">ISBN: </th>
+  <td> {{books.isbn}} </td>
+</tr>
+<br/>
+ </fieldset>
+</form>
+
+

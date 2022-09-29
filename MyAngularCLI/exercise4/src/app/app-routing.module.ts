@@ -1,11 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { BlogListComponent } from './blog/pages/blog-list/blog-list.component';
-import { BookListComponent } from './book/pages/book-list/book-list.component';
 
 const routes: Routes = [
+  {
+    path:"",
+    redirectTo: '/blog',
+    pathMatch: 'full'
+  },
   {
     path: "book",
     loadChildren: () => import('./book/book.module').then(m => m.BookModule)
@@ -17,11 +18,6 @@ const routes: Routes = [
   {
     path: "profile",
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-  },
-  {
-    path:"",
-    redirectTo: '/blog',
-    pathMatch: 'full'
   }
 
 ];

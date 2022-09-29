@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  min-height: 100%;
+}
+body, div, form, input, select, p {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  border: #27374d;
+}
+h1 {
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(50, 50, 50);
+}
+h3 {
+  margin: 12px 0;
+  color: #1e1f1e;
+}
+form {
+  width: 50%;
+  padding: 20px;
+  align-self: center;
+  margin: auto;
+  background-color: #929291;
+}
+fieldset {
+  border: 4px solid #273609;
+}
+label {
+  padding: 0 5px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: bolder;
+  color: rgb(50, 50, 50);
+  vertical-align: middle
+}
+input[type=text] {
+  width: 90%;
+  height: fit-content;
+  padding: 12px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid rgb(66, 45, 45);
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button {
+  width: 10%;
+  padding: 12px 0;
+  border: none;
+  height: 60%;
+}
+button:hover {
+  background: #c0c2be;
+}
+.btn {
+  width: 20%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  background: #464645;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  vertical-align: middle
+}
+.alert{
+  color: rgb(131, 7, 7);
+  margin-left: 10%;
+  font-size: larger;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
+</style>
+
+<body>
+    <form [formGroup]="blogForm">
+      <div class="form-group">
+      <h1>Blog Form</h1>
+      <fieldset>
+        <legend>
+          <h3>Blog Details</h3>
+        </legend>
+      <div class="container">
+      <label for="title">Title: </label> <br/>
+      <input formControlName="title" type="text" id="title" class="form-control" required>
+      <div class="alert" *ngIf="title?.errors?.['required']" class="alert alert-danger"></div>
+
+      <label for="description">Description: </label> <br/>
+      <input formControlName="description" type="text" id="description" class="form-control" required>
+      <div class="alert" *ngIf="description?.errors?.['required']" class="alert alert-danger"></div>
+
+      <label for="author">Author: </label> <br/>
+      <input formControlName="author" type="text" id="author" class="form-control" required>
+      <div class="alert" *ngIf="author?.errors?.['required']" class="alert alert-danger"></div>
+
+      <ng-container formArrayName="comment"><br/>
+        <label for="comment">Comment/s: </label>
+        <div class="e-input-group">
+        <div *ngFor="let _ of ff.controls; index as i" class="input-group mb-3">
+          <input [formControlName]="i" type="text" id="i" class="form-control" required>
+            <span ><button class="fa fa-trash fa-lg" (click)="deleteComment(i)"></button></span>
+        </div>
+        <button class="btn"  (click)="addComment()">Add Comment</button>
+
+       </div>
+      </ng-container>
+      <button type="submit" (click)="submit()" class="btn">Submit</button>
+    </div>
+</fieldset>
+</div>
+  </form>
+</body>
+
