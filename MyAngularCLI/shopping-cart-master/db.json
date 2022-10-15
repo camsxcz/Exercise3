@@ -1,0 +1,67 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "productName": "Nescafe",
+      "productDescription": "typicode",
+      "productPrice": 150,
+      "productCategory": ["Groceries"]
+    },
+    {
+      "id": 2,
+      "productName": "Head & Shoulder",
+      "productDescription": "typicode",
+      "productPrice": 68,
+      "productCategory": ["Groceries"]
+    },
+    {
+      "id": 3,
+      "productName": "Energen Twin Pack",
+      "productDescription": "typicode",
+      "productPrice": 11,
+      "productCategory": ["Groceries"]
+    },
+    {
+      "id": 4,
+      "productName": "Automatic Rice Cooker ",
+      "productDescription": "typicode",
+      "productPrice": 1000,
+      "productCategory": ["Appliances"]
+    },
+    {
+      "id": 5,
+      "productName": "Condura Refrigerator 2 ways",
+      "productDescription": "typicode",
+      "productPrice": 17000,
+      "productCategory": ["Appliances"]
+    },
+    {
+      "id": 6,
+      "productName": "Washing Machine 2 Tubs with Dryer",
+      "productDescription": "typicode",
+      "productPrice": 8000,
+      "productCategory": ["Appliances"]
+    },
+    {
+      "id": 7,
+      "productName": "Casio Watch Digital for Men",
+      "productDescription": "typicode",
+      "productPrice": 2500,
+      "productCategory": ["Accessories"]
+    },
+    {
+      "id": 8,
+      "productName": "Pearl Earrings 2 Pairs",
+      "productDescription": "typicode",
+      "productPrice": 500,
+      "productCategory": ["Accessories"]
+    },
+    {
+      "id": 9,
+      "productName": "Shades for Men",
+      "productDescription": "typicode",
+      "productPrice": 1500,
+      "productCategory": ["Accessories"]
+    }
+  ]
+}

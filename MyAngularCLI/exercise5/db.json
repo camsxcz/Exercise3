@@ -1,0 +1,55 @@
+{
+  "blog": [
+    {
+      "title": "Java Tutorial",
+      "description": "30 hours of training",
+      "author": "Juan Dela Cruz III",
+      "comments": "Interested to join",
+      "id": 123
+    },
+    {
+      "id": 124,
+      "title": "Spring Tutorial",
+      "description": "30 hours of training",
+      "author": "Maria Mercedes",
+      "comments": [
+        "Interested to join",
+        "Training fee"
+      ]
+    },
+    {
+      "id": 125,
+      "title": "SQL Tutorial",
+      "description": "24 hours of training",
+      "author": "Secret muna",
+      "comments": [
+        "Interested to join",
+        "Training fee"
+      ]
+    }
+  ],
+  "books": [
+    {
+      "name": "Angular Book",
+      "authors": "One",
+      "isbn": "123456789X",
+      "id": 12345
+    },
+    {
+      "name": "Spring MVC",
+      "authors": "Four",
+      "isbn": "987654321X",
+      "id": 12346
+    },
+    {
+      "id": 12347,
+      "name": "SQL",
+      "authors": [
+        "Seven",
+        "Eight",
+        "Nine"
+      ],
+      "isbn": "2468013579"
+    }
+  ]
+}

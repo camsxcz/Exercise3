@@ -1,0 +1,43 @@
+
+<style>
+  button {
+   width: 10%;
+   padding: 10px ;
+   margin-right: 10px;
+   border-radius: 5px;
+   border: none;
+   background: #464645;
+   font-size: 14px;
+   font-weight: 600;
+   color: #fff;
+ }
+  button:hover {
+   background: #c0c2be;
+ }
+  .center{
+   display: flex;
+   justify-content: center;
+ }
+ h1{
+   text-align: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+ </style>
+
+<h1> List of Blogs</h1>
+<app-command-bar (addButton)="addAction($event)"
+(deleteButton)="deleteAction($event)"></app-command-bar>
+
+
+<div  *ngFor="let item of blog">
+<app-blog-item [blogs]="item"></app-blog-item>
+
+<br/>
+<div class="center">
+<button (click)="editButton(item.id)"> Edit </button>
+
+<button (click)="deleteButton(item.id)"> Delete </button>
+</div>
+<br>
+</div>
+

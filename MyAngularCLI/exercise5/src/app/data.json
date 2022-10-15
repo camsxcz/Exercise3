@@ -1,0 +1,25 @@
+
+  {
+    "books":[
+      {
+        "id": 12345,
+        "name": "Angular Book",
+        "authors": ["One", "Two", "Three"],
+        "isbn": "123456789X"
+      },
+      {
+        "id": 12346,
+        "name": "Spring MVC",
+        "authors": ["Four", "Five", "Six"],
+        "isbn": "987654321X"
+      },
+      {
+        "id": 12347,
+        "name": "SQL",
+        "authors": ["Seven", "Eight", "Nine"],
+        "isbn": "2468013579"
+      }
+    ]
+  }
+
+
